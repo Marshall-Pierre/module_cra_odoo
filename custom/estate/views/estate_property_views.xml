@@ -1,6 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
+    <record id="estate_property_view_search" model="ir.ui.view">
+        <field name="name">estate.property.view.search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Search Estate">
+                <field name="name"/>
+                <field name="postcode"/>
+                <field name="expected_price"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="facades"/>
+                <separator/>
+                <filter string="Propriete" name="state" domain="['|',('state', '=', 'nouveau'),('state', '=', 'offre reçue')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Code Postal" name="postcode" context="{'group_by':'postcode', 'residual_visible':True}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="estate_property_view_tree" model="ir.ui.view">
+        <field name="name">estate.property.tree</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="postcode"/>
+                <field name="date_availability"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="facades"/>
+                <field name="garage"/>
+                <field name="garden"/>
+                <field name="garden_area"/>
+                <field name="garden_orientation"/>
+                <field name="active"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="estate_property_view_form" model="ir.ui.view">
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form string="Estate Property">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="name" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="description"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="description" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="postcode"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="postcode" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="date_availability"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="date_availability" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="expected_price"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="expected_price" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="selling_price"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="selling_price" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="bedrooms"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="bedrooms" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="living_area"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="living_area" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="facades"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="facades" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="garage"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="garage" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="garden"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="garden" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="garden_area"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="garden_area" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="garden_orientation"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="garden_orientation" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="active"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="active" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="state"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="state" class="mb16"/>
+                        </h1>
+                        <field name="active" invisible="1"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
     <record id="estate_property_action" model="ir.actions.act_window">
         <field name="name">Estate action</field>
         <field name="res_model">estate.property</field>
