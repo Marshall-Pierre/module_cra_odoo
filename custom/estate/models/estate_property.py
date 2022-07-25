@@ -7,6 +7,9 @@ class Property(models.Model):
     _name = "estate.property"
     _description = "ESTATE proerty"
 
+    property_type_id = fields.Many2one("estate.property.type", string="Property Type")
+    vendeur = fields.Many2one("res.users", string="Vendeur", default=lambda self: self.env.user, readonly=True)
+    acheteur = fields.Char(required=True)
     name = fields.Char(required=True)
     description = fields.Text()
     postcode = fields.Char()
@@ -30,3 +33,4 @@ class Property(models.Model):
         selection = [('nouveau', 'Nouveau'), ('offre reçue', 'Offre reçue'), ('offre acceptée', 'Offre acceptée'), ('vendue', 'Vendue'), ('annulée', 'Annulée')],
         required = True,
     )
+    tag_ids = fields.Many2many("estate.property.tag", string="Tag")
