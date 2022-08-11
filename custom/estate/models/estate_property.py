@@ -1,7 +1,7 @@
 from soupsieve import select
 from tomlkit import value
 from traitlets import default
-from odoo import fields, models
+from odoo import api, fields, models
 
 class Property(models.Model):
     _name = "estate.property"
@@ -34,3 +34,9 @@ class Property(models.Model):
         required = True,
     )
     tag_ids = fields.Many2many("estate.property.tag", string="Tag")
+    total_area = fields.Float(compute="_compute_total_area")
+
+    @api.depends("living_area", "garden_area")
+    def _compute_total_area(self):
+        for element in self:
+            element.total_area = element.living_area + element.garden_area

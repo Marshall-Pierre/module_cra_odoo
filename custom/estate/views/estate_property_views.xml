@@ -140,6 +140,20 @@
                         </h1>
 
                         <div class="oe_edit_only">
+                            <label for="garden_area"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="garden_area" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
+                            <label for="total_area"/>
+                        </div>
+                        <h1 class="mb32">
+                            <field name="total_area" class="mb16"/>
+                        </h1>
+
+                        <div class="oe_edit_only">
                             <label for="facades"/>
                         </div>
                         <h1 class="mb32">
@@ -158,13 +172,6 @@
                         </div>
                         <h1 class="mb32">
                             <field name="garden" class="mb16"/>
-                        </h1>
-
-                        <div class="oe_edit_only">
-                            <label for="garden_area"/>
-                        </div>
-                        <h1 class="mb32">
-                            <field name="garden_area" class="mb16"/>
                         </h1>
 
                         <div class="oe_edit_only">
