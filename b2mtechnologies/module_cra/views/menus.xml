@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <menuitem id="project_menu_root" name="CRA">
+        <menuitem id="project_first_level_menu" name="Projets">
+            <menuitem id="project_model_menu_action" action="project_model_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
