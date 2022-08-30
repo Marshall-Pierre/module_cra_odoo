@@ -1,5 +1,49 @@
 <?xml version="1.0"?>
 <odoo>
+
+    <record id="task_model_view_form" model="ir.ui.view">
+        <field name="name">task.model.form</field>
+        <field name="model">task.model</field>
+        <field name="arch" type="xml">
+            <form string="Créer une tache">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="load_task"/>
+                    </group>
+                    <notebook>
+                        <page string="Liste des exécutants du projet">
+                            <field name="project_implementer_ids"></field>
+                        </page>
+                        <page string="Projet assigné">
+                            <field name="project_id"></field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="project_model_view_form" model="ir.ui.view">
+        <field name="name">project.model.form</field>
+        <field name="model">project.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="project_manager_id"/>
+                        <field name="name"/>
+                    </group>
+                    <notebook>
+                        <page string="liste des taches">
+                            <field name="task_ids"></field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="project_model_view_tree" model="ir.ui.view">
         <field name="name">project.model.tree</field>
         <field name="model">project.model</field>
