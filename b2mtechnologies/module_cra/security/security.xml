@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.module.category" id="module_category_cra">
+        <field name="name">CRA</field>
+        <field name="description">Compte Rendu D'activité</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="group_cra_user" model="res.groups">
+        <field name="name">Employee</field>
+        <field name="category_id" ref="module_category_cra" />
+    </record>
+
+    <record id="group_cra_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_cra" />
+        <field name="implied_ids" eval="[(4, ref('group_cra_user'))]"/>
+    </record>
+</odoo>

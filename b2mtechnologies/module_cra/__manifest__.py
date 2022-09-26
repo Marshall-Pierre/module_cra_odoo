@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "module_cra",
+    'name': "CRA",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Ce Module à été créé pour faire un reporting des activité dans une entreprise""",
 
     'description': """
         Long description of module's purpose
     """,
 
-    'author': "My Company",
+    'author': "Marshall-Pierre",
     'website': "http://www.yourcompany.com",
 
-    'category': 'Uncategorized',
+    'category': 'Applications',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
@@ -21,9 +20,11 @@
 
     # always loaded
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/report_views.xml',
         'views/project_views.xml',
         'views/menus.xml',
     ],

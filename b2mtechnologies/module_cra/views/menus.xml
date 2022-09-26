@@ -2,8 +2,11 @@
 
 <odoo>
     <menuitem id="project_menu_root" name="CRA" web_icon="module_cra,static/description/icon.png">
-        <menuitem id="project_first_level_menu" name="Projets">
-            <menuitem id="project_model_menu_action" action="project_model_action"/>
+        <menuitem id="week_first_level_menu" name="Reporting" action="week_model_action">
+            <!-- <menuitem id="project_model_menu_action" action="project_model_action"/> -->
+        </menuitem>
+        <menuitem id="project_first_level_menu" name="Projets" action="project_model_action">
+            <!-- <menuitem id="project_model_menu_action" action="project_model_action"/> -->
         </menuitem>
     </menuitem>
 </odoo>
