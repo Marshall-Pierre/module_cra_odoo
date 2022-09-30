@@ -1,13 +1,39 @@
 <?xml version="1.0"?>
 <odoo>
 
+    <record id="week_model_view_form" model="ir.ui.view">
+        <field name="name">week.model.form</field>
+        <field name="model">week.model</field>
+        <field name="arch" type="xml">
+            <form string="Ajouter un reporting">
+                <header>
+                    <button string="confirm"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="user_id" class="oe_edit_only" strin="Nom du créateur"/>
+                        <h3><field name="user_id"/></h3>
+                        <label for="name" class="oe_edit_only" strin="Intervale de semaine"/>
+                        <h3><field name="name"/></h3>
+                    </div>
+
+                    <separator string="Tâche n°1" colspan="2"/>
+
+                    <group colspan="2" col="2">
+                        <field name="monday_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="week_model_view_tree" model="ir.ui.view">
         <field name="name">week.model.tree</field>
         <field name="model">week.model</field>
         <field name="arch" type="xml">
             <tree string="Channel">
                 <field name="name"/>
-                <field name="user_idmp"/>
+                <field name="user_id"/>
                 <field name="monday_id" string="Lundi" />
                 <field name="tuesday_id" string="Mardi"/>
                 <field name="wednesday_id" string="Mercredi"/>
@@ -21,6 +47,6 @@
         <field name="name">Reporting</field>
         <field name="res_model">week.model</field>
         <field name="view_mode">tree,form</field>
-        <!-- <field name="domain">[('user_id', '!=', 'Joannie OBAME')]</field> -->
+        <field name="domain">[('user_id', '=', uid)]</field>
     </record>
 </odoo>

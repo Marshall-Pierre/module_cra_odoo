@@ -5,8 +5,8 @@ class WeekModel(models.Model):
     _description = "Semaine de la charge acutel des project"
 
     name = fields.Char(string="Semaine du")
-    user_idmp = fields.Many2one("res.users", string="Chargé de semaine", default=lambda self: self.env.user, readonly=True)
-    monday_id = fields.Many2one("monday.model")
+    user_id = fields.Many2one("res.users", string="Chargé de semaine", default=lambda self: self.env.user, readonly=True)
+    monday_id = fields.Many2one("monday.model", string="Lundi")
     tuesday_id = fields.Many2one("tuesday.model")
     wednesday_id = fields.Many2one("wednesday.model")
     thursday_id = fields.Many2one("thursday.model")
