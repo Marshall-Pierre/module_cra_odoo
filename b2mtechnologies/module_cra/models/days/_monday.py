@@ -17,6 +17,11 @@ class MondayModel(models.Model):
     load_task2 = fields.Float(string="Charge")
     load_task3 = fields.Float(string="Charge")
 
+    comment_task0 = fields.Text(string="Commentaire")
+    comment_task1 = fields.Text(string="Commentaire")
+    comment_task2 = fields.Text(string="Commentaire")
+    comment_task3 = fields.Text(string="Commentaire")
+
 
     @api.depends("load_task0", "load_task1", "load_task2", "load_task3")
     def _compute_total_load(self):

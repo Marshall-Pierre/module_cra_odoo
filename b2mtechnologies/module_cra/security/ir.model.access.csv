@@ -4,3 +4,6 @@ access_task_model,access_task_model,model_task_model,module_cra.group_cra_user,1
 access_week_model,access_week_model,model_week_model,module_cra.group_cra_user,1,1,1,1
 access_monday_model,access_monday_model,model_monday_model,module_cra.group_cra_user,1,1,1,1
 access_tuesday_model,access_tuesday_model,model_tuesday_model,module_cra.group_cra_user,1,1,1,1
+access_wednesday_model,access_wednesday_model,model_wednesday_model,module_cra.group_cra_user,1,1,1,1
+access_thursday_model,access_thursday_model,model_thursday_model,module_cra.group_cra_user,1,1,1,1
+access_friday_model,access_friday_model,model_friday_model,module_cra.group_cra_user,1,1,1,1
