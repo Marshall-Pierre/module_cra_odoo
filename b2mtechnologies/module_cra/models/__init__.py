@@ -9,3 +9,4 @@ from .days import _wednesday
 from .days import _thursday
 from .days import _friday
 from . import week
+from . import see_admin_week

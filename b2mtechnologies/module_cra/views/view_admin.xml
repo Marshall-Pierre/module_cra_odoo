@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- <record id="week_model_view_tree" model="ir.ui.view">
+        <field name="name">week.model.tree</field>
+        <field name="model">week.model</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="monday_id" string="Lundi" />
+                <field name="tuesday_id" string="Mardi"/>
+                <field name="wednesday_id" string="Mercredi"/>
+                <field name="thursday_id" string="Jeudi"/>
+                <field name="friday_id" string="Vendredi"/>
+            </tree>
+        </field>
+    </record> -->
+<!-- attrs="{'invisible': [('name', '=', '19/09/2022 - 23/09/2022')]}" -->
+    <record id="week_admin_model_action" model="ir.actions.act_window">
+        <field name="name">Reportings</field>
+        <field name="res_model">week.amin.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

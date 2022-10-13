@@ -195,6 +195,8 @@
                         <h3><field name="user_id"/></h3>
                         <label for="name" class="oe_edit_only" strin="Intervale de semaine"/>
                         <h3><field name="name"/></h3>
+                        <label for="load_week" class="oe_edit_only" strin="Charge de la semaine"/>
+                        <h3><field name="load_week"/></h3>
                     </div>
 
                     <separator string="Jours" colspan="2"/>
@@ -223,6 +225,7 @@
                 <field name="wednesday_id" string="Mercredi"/>
                 <field name="thursday_id" string="Jeudi"/>
                 <field name="friday_id" string="Vendredi"/>
+                <field name="load_week" string="Charge de la semaine"/>
             </tree>
         </field>
     </record>

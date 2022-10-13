@@ -7,3 +7,6 @@ access_tuesday_model,access_tuesday_model,model_tuesday_model,module_cra.group_c
 access_wednesday_model,access_wednesday_model,model_wednesday_model,module_cra.group_cra_user,1,1,1,1
 access_thursday_model,access_thursday_model,model_thursday_model,module_cra.group_cra_user,1,1,1,1
 access_friday_model,access_friday_model,model_friday_model,module_cra.group_cra_user,1,1,1,1
+
+access_week_amin_model,access_week_amin_model,model_week_amin_model,module_cra.group_cra_manager,1,1,1,1
+

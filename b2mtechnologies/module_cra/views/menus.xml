@@ -5,7 +5,13 @@
         <menuitem id="week_first_level_menu" name="Reporting" action="week_model_action">
             <!-- <menuitem id="project_model_menu_action" action="project_model_action"/> -->
         </menuitem>
+        <!-- <menuitem id="reporting_admin_first_level_menu" name="Voir tous les reportings" action="week_admin_model_action">
+        </menuitem> -->
         <menuitem id="project_first_level_menu" name="Projets" action="project_model_action">
+            <!-- <menuitem id="project_model_menu_action" action="project_model_action"/> -->
+        </menuitem>
+
+        <menuitem id="week_admin_level_menu" name="Voir Tous les reportings" action="week_admin_model_action">
             <!-- <menuitem id="project_model_menu_action" action="project_model_action"/> -->
         </menuitem>
     </menuitem>
